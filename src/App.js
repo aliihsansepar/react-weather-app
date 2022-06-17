@@ -1,9 +1,11 @@
-function App() {
+import './assets/css/reset.css';
+import './assets/css/tailwind.css';
+import CardSection from './components/CardSection.js';
+
+export default function App() {
   return (
-    <div className="App">
-        <h1>Hello World!</h1>
+    <div className="bg-sky-900 h-screen relative">
+      <CardSection />
     </div>
   );
 }
-
-export default App;
