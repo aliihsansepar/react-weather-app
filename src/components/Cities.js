@@ -1,28 +1,25 @@
 export default function Cities () {
   return(
     <div className="mb-12">
-         <label className="font-medium text-base text-black block mb-3">
-         Select City You Live
-         </label>
-         <div className="relative">
-            <select className="
-               w-full
-               border-[1.5px] border-form-stroke
-               rounded-lg
-               py-3
-               px-5
-               font-medium
-               text-body-color
-               outline-none
-               focus:border-primary
-               active:border-primary
-               transition
-               disabled:bg-[#F5F7FD] disabled:cursor-default
-               appearance-none
+         <label className="font-medium text-base text-black block mb-3">Select City</label>
+         <div className="relative shadow-lg">
+            <select className="w-full
+                              border-[1.5px] border-form-stroke
+                              rounded-lg
+                              py-3 px-5
+                              font-medium
+                              text-body-color
+                              outline-none
+                              focus:border-primary
+                              active:border-primary
+                              transition
+                              disabled:bg-[#F5F7FD] disabled:cursor-default
+                              appearance-none
                ">
-               <option value="">Option</option>
-               <option value="">Option</option>
-               <option value="">Option</option>
+               <option value="">Select</option>
+               <option>Ankara</option>
+               <option>İstanbul</option>
+               <option>İzmir</option>
             </select>
             <span className="
                absolute
