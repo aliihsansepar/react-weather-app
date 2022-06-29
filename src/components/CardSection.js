@@ -1,7 +1,18 @@
 import Cities from './Cities';
 import Card from './Card';
+import { useEffect, useState } from 'react';
 
 export default function CardSection() {
+  const [dates, setDates] = useState([]);
+  useEffect(() => {
+    let date = new Date();
+    for(let i= 0; i < 5; i++) {
+      date.setDate(date.getDate() + i);  
+      dates.push(date.toUTCString()); 
+    }
+    setDates(dates);  
+  });
+  console.log(dates)
   return (
     <section className="absolute 
                         2xl:top-52
@@ -27,11 +38,9 @@ export default function CardSection() {
       </div>
       <div className="container">
         <div className="flex flex-wrap -mx-4">
-            <Card date="Today" degree="33"/>
-            <Card date="Tomorrow" degree="31"/>
-            <Card date="19/06/2022" degree="32"/>
-            <Card date="20/06/2022" degree="35"/>
-            <Card date="21/06/2022" degree="40"/>
+          { dates.map( (date) => (
+              <Card date={date} degree="33"/>
+          ))}
         </div>
       </div>
     </section>
